@@ -1,0 +1,264 @@
+/*
+	Name: Mirrorlake GUI
+	Date: October 2013
+	Description: GUI to access Mirrorlake database
+	Version: 1.0
+	Author: Russell Borja
+*/
+ 
+/* Imports */
+@import url("reset.css");
+@import url("global-forms.css");
+ 
+/***** Global *****/
+/* Body */
+body {
+		background: #F5F4EF url('../images/bg.png');
+		color: #000305;
+		font-size: 14px; /* Base font size: 14px */
+		font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+		line-height: 1.429;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+		
+	}
+
+
+/* Headings */
+h2 {font-size: 1.571em}	/* 22px */
+h3 {font-size: 1.429em}	/* 20px */
+h4 {font-size: 1.286em}	/* 18px */
+h5 {font-size: 1.143em}	/* 16px */
+h6 {font-size: 1em}	/* 14px */
+ 
+h1{margin-left: 0.0em;} 
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+	margin-bottom: .8em;
+}
+
+.spacer{clear:both;height:1px;}
+ 
+/* Anchors */
+a {outline: 0;}
+a img {border: 0px; text-decoration: none;}
+a:link, a:visited {
+	color: #C74350;
+	padding: 0 1px;
+	text-decoration: underline;
+}
+a:hover, a:active {
+	background-color: #C74350;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #333;
+	height:50px;
+}
+ 
+/* Paragraphs */
+p {margin-bottom: 1.143em;}
+* p:last-child {margin-bottom: 0;}
+ 
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+ 
+::-moz-selection {background: #F6CF74; color: #fff;}
+::selection {background: #F6CF74; color: #fff;}
+ 
+/* Lists */
+ul {
+	list-style: outside disc;
+	margin: 1em 0 1.5em 1.5em;
+}
+ 
+ol {
+	list-style: outside decimal;
+	margin: 1em 0 1.5em 1.5em;
+}
+ 
+	
+/***** Header *****/
+#banner{
+	background: #fff;
+	margin-bottom: 2em;
+	overflow: hidden;
+	padding: 20px;
+	width: 450px;
+	border: 1px #0;
+	box-shadow: 0px 6px 10px #888888;
+	height:360px;
+	
+}
+#banner h1 {font-size: 3.0em; line-height: .6;}
+
+/***** Layout *****/
+.body {clear: both; margin: 0 auto; width: 600px;}
+img.right figure.right {float: right; margin: 0 0 2em 2em;}
+img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+
+/***** Navbar *****/
+#banner nav {
+		background: #000305;
+		font-size: 1.143em;
+		height: 40px;
+		line-height: 30px;
+		margin: 0 auto 1em auto;
+		padding: 0;
+		text-align: center;
+		width: 396px;
+		
+		
+	}
+	
+#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
+#banner nav li {float: left; display: inline; margin: 0; width:260px; text-align:centre; margin-left:-71px;}
+	
+#banner nav a:link, #banner nav a:visited {
+		color: #fff;
+		display: inline-block;
+		height: 30px;
+		padding: 5px 1.5em;
+		text-decoration: none;
+	}
+#banner nav a:hover, #banner nav a:active,
+#banner nav .active a:link, #banner nav .active a:visited {
+		background: #C74451;
+		color: #fff;
+		text-shadow: none !important;
+		width:150px;
+	}
+
+/***** Form Entries *****/
+.myForm{
+	margin:0 auto;
+	
+	width:400px;
+
+}
+
+
+#container label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:120px;
+	float:left;
+	
+}
+
+#container .small{
+	color:#666666;
+	display:block;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+	margin-top:-0.5em;
+	width:120px;
+}
+
+input[type="text"]{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:262px;
+	margin:2px 0 20px 10px;
+} 
+
+select{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:268px;
+	margin:2px 0 20px 10px;
+}
+
+#parameters .formalign{
+	width:40px;
+	margin:2px 0px 20px 10px;
+	padding:2px 2px;
+}
+
+#parameters .formalignmax{
+	width:40px;
+	margin:2px 0px 20px 10px;
+	padding:2px -1px;
+}
+
+#parameters .fromtomax{
+	
+	display:inline;
+	width: 100px;
+	
+}
+
+#parameters .lowerlabel{
+	width: 61px;
+}
+
+/***** Submit/Reset Buttons *****/
+.clickbuttons{
+	margin-left:128px;
+	text-align:left;
+	
+	}
+input[type=submit],input[type=reset]{
+	clear:both;
+	margin-right:20px;
+	margin-top: 5px;
+	width:100px;
+	height:31px;
+	background:#666666;
+	text-align:centre;
+	line-height:31px;
+	color:#FFFFFF;
+	font-size:11px;
+	font-weight:bold;
+	
+}
+
+
+
+/***** Tables *****/
+#headers{
+	background-color: #C74350;
+	font-weight:bold;
+	text-align:center;
+	color:#fff;	
+	border:1px solid #0;
+	
+}
+
+#content{
+	border:1px solid #0;
+	vertical-align: top;
+	text-align: left;
+}
+
+table{
+	background: #fff;
+	box-shadow: 0px 5px 10px #888888;
+	border-collapse: collapse;
+	table-layout:fixed;
+	word-break:break-all;
+}
+
+/* Autocomplete form */
+.autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
+.autocomplete-suggestion { padding: 0px 2px; font-size: 0.9em; white-space: nowrap; overflow: hidden; text-align: left;}
+.autocomplete-selected { background: #f0f0f0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+
+/* Footer */ 
+footer{
+	margin:100px 0px 0px 0px;
+}
+
+
+
+
+
